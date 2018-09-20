@@ -1,0 +1,11 @@
+{
+  "name": "short-cicuiting",
+  "version": "1.0.0",
+  "description": "This module demonstrates how easily one can print messages or pass objects around with JavaScript managing which instance to use. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Afzaal Ahmad Zeeshan",
+  "license": "MIT"
+}

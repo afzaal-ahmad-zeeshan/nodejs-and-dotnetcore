@@ -1,0 +1,11 @@
+{
+  "name": "dependency-injection",
+  "version": "1.0.0",
+  "description": "This sample demonstrates how a pure-JavaScript, dynamically typed app can introduce the concepts of dependency injection.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Afzaal Ahmad Zeeshan",
+  "license": "MIT"
+}
