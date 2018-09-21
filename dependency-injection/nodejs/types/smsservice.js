@@ -11,4 +11,5 @@ smsService.prototype.serve = function() {
     console.log("SMS Service serving the request.");
 }
 
+smsService = smsService.prototype;
 module.exports = smsService;

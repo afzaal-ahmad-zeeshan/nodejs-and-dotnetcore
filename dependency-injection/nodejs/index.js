@@ -1,5 +1,5 @@
 console.log("Creating the puny DI container.");
-let diContainer = require("./dependencyinjection/container")("primary");
+let diContainer = require("./dependencyinjection/container").getContainer();
 
 // Pulling the instances
 let service = require("./types/service");
@@ -12,10 +12,13 @@ console.log("Done, executing the service.");
 
 var instance = diContainer.getInstance(service);
 if(instance != null) {
-    instance.prototype.serve();
+    instance.serve();
 } else {
     // Typically should not happen, but for safe keeping.
     console.log("Container returned a null object, perhaps an instance was not created.");
 }
+
+// Trying from another module
+require("./test");
 
 console.log("Done. Bye bye!");
