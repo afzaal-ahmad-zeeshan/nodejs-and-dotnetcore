@@ -18,7 +18,4 @@ if(instance != null) {
     console.log("Container returned a null object, perhaps an instance was not created.");
 }
 
-// Trying from another module
-require("./test");
-
 console.log("Done. Bye bye!");

@@ -3,22 +3,16 @@ using System.Collections.Generic;
 
 namespace DependencyInjection {
     public class Container {
-        private Dictionary<Type, Type> instances { get; set; }
+        private static Dictionary<Type, Type> instances { get; set; } = new Dictionary<Type, Type>();
 
-        public Container() {
-            // I find this a bit more easier to read and understand, than an in-place initialization.
-            // Gives a sense of ownership to the object; as needed.
-            instances = new Dictionary<Type, Type>();
-        }
-
-        public void AddInstance<TInterface, TInstance>() 
+        public static void AddInstance<TInterface, TInstance>() 
             where TInterface : class
             where TInstance : class
         {
             instances.Add(typeof(TInterface), typeof(TInstance));
         }
 
-        public TInterface GetInstance<TInterface> () 
+        public static TInterface GetInstance<TInterface> () 
             where TInterface : class
         {
             Type instance = null;

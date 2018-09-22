@@ -9,14 +9,13 @@ namespace dotnet
         static void Main(string[] args)
         {
             Console.WriteLine("Creating the puny DI container.");
-            var diContainer = new Container();
-
+            
             Console.WriteLine("Created container, adding the instances...");
-            diContainer.AddInstance<IService, SmsService>();
+            Container.AddInstance<IService, SmsService>();
 
             Console.WriteLine("Done, executing the service.");
 
-            IService service = diContainer.GetInstance<IService>();
+            IService service = Container.GetInstance<IService>();
             if(service != null) {
                 service.Serve();
             } else {
