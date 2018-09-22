@@ -5,6 +5,9 @@ namespace DependencyInjection {
     public class Container {
         private static Dictionary<Type, Type> instances { get; set; } = new Dictionary<Type, Type>();
 
+        // No need to call this.
+        private Container() {}
+
         public static void AddInstance<TInterface, TInstance>() 
             where TInterface : class
             where TInstance : class
