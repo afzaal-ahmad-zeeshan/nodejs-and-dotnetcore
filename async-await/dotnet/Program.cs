@@ -16,7 +16,7 @@ namespace dotnet
                     }, TaskContinuationOptions.OnlyOnRanToCompletion);
                     task.ContinueWith(operation => {
                         Console.WriteLine($"Operation had some issues. Error says, {operation.Exception.Message}.");
-                    }, TaskContinuationOptions.OnlyOnRanToCompletion);
+                    }, TaskContinuationOptions.OnlyOnFaulted);
                 task.Wait();
             } catch (Exception error) {
                 Console.WriteLine(error.Message);
